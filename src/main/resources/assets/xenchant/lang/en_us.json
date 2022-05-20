@@ -1,4 +1,5 @@
 {
+	"enchantment.level.1": "0",
 	"enchantment.level.1": "I",
 	"enchantment.level.2": "II",
 	"enchantment.level.3": "III",
@@ -998,5 +999,5 @@
 	"enchantment.level.997": "CMXCVII",
 	"enchantment.level.998": "CMXCVIII",
 	"enchantment.level.999": "CMXCIX",
-	"enchantment.level.1000": "M",
+	"enchantment.level.1000": "M"
 }

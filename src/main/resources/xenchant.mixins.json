@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.majicktek.xenchant.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "package": "net.mrlolf.xenchant.mixin",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
-    "EnchantCommandMixin"
+    "MainMixin"
   ],
   "injectors": {
     "defaultRequire": 1
