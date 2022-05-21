@@ -16,7 +16,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -24,18 +24,18 @@ import java.util.Iterator;
 public class EnchantCommand extends net.minecraft.server.command.EnchantCommand {
 
     private static final DynamicCommandExceptionType FAILED_ENTITY_EXCEPTION = new DynamicCommandExceptionType((entityName) -> {
-        return new TranslatableText("commands.enchant.failed.entity", new Object[]{entityName});
+        return Text.translatable("commands.enchant.failed.entity", new Object[]{entityName});
     });
     private static final DynamicCommandExceptionType FAILED_ITEMLESS_EXCEPTION = new DynamicCommandExceptionType((entityName) -> {
-        return new TranslatableText("commands.enchant.failed.itemless", new Object[]{entityName});
+        return Text.translatable("commands.enchant.failed.itemless", new Object[]{entityName});
     });
     private static final DynamicCommandExceptionType FAILED_INCOMPATIBLE_EXCEPTION = new DynamicCommandExceptionType((itemName) -> {
-        return new TranslatableText("commands.enchant.failed.incompatible", new Object[]{itemName});
+        return Text.translatable("commands.enchant.failed.incompatible", new Object[]{itemName});
     });
     private static final Dynamic2CommandExceptionType FAILED_LEVEL_EXCEPTION = new Dynamic2CommandExceptionType((level, maxLevel) -> {
-        return new TranslatableText("commands.enchant.failed.level", new Object[]{level, maxLevel});
+        return Text.translatable("commands.enchant.failed.level", new Object[]{level, maxLevel});
     });
-    private static final SimpleCommandExceptionType FAILED_EXCEPTION = new SimpleCommandExceptionType(new TranslatableText("commands.enchant.failed"));
+    private static final SimpleCommandExceptionType FAILED_EXCEPTION = new SimpleCommandExceptionType(Text.translatable("commands.enchant.failed"));
 
 
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, boolean dedicated) {
@@ -73,9 +73,9 @@ public class EnchantCommand extends net.minecraft.server.command.EnchantCommand 
             throw FAILED_EXCEPTION.create();
         }
         if (targets.size() == 1) {
-            source.sendFeedback(new TranslatableText("commands.enchant.success.single", new Object[]{enchantment.getName(level), ((Entity)targets.iterator().next()).getDisplayName()}), true);
+            source.sendFeedback(Text.translatable("commands.enchant.success.single", new Object[]{enchantment.getName(level), ((Entity)targets.iterator().next()).getDisplayName()}), true);
         } else {
-            source.sendFeedback(new TranslatableText("commands.enchant.success.multiple", new Object[]{enchantment.getName(level), targets.size()}), true);
+            source.sendFeedback(Text.translatable("commands.enchant.success.multiple", new Object[]{enchantment.getName(level), targets.size()}), true);
         }
         return i;
     }

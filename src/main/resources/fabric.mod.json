@@ -12,7 +12,7 @@
     "sources": "https://github.com/MrLoLf/XEnchant"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/xenchant/icon.png",
 
   "environment": "*",
@@ -26,9 +26,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.5",
     "fabric": "*",
-    "minecraft": "1.18.x"
+    "minecraft": "1.19.x"
   },
   "suggests": {
     "flamingo": "*"

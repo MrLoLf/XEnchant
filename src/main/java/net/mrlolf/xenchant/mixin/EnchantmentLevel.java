@@ -6,8 +6,9 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(Enchantment.class)
 public class EnchantmentLevel {
-    /**
+   /**
      * @author Fabian Roscher
+     * @reason default enchanting level to low
      */
     @Overwrite
     public int getMaxLevel() {
