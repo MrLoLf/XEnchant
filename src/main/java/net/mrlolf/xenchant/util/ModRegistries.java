@@ -9,6 +9,6 @@ public class ModRegistries {
     }
 
     private static void registerCommands(){
-        CommandRegistrationCallback.EVENT.register(EnchantCommand::register);
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> EnchantCommand.register(dispatcher, registryAccess));
     }
 }
