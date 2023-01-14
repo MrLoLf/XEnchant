@@ -1,9 +1,9 @@
-Ever felt like the enchant command was a bit limiting?
+# Fabric Example Mod
 
-Now you can easily enchant anything you want!
+## Setup
 
-EXAMPLE: /enchant @p minecraft:sharpness 99
+For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
 
-There should be no limits on your enchantment or where you can apply it. Except for the levels, this will be set to 0 if they are too high.
+## License
 
-It will also display enchantments in Roman numerals up to and including 1000 (M).
+This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
