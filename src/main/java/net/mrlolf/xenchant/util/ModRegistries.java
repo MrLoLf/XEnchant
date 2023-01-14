@@ -1,6 +1,6 @@
 package net.mrlolf.xenchant.util;
 
-import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.mrlolf.xenchant.command.EnchantCommand;
 
 public class ModRegistries {
