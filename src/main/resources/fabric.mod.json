@@ -21,13 +21,9 @@
       "net.mrlolf.xenchant.XEnchantEntry"
     ]
   },
-  "mixins": [
-    "xenchant.mixins.json"
-  ],
-
   "depends": {
-    "fabricloader": ">=0.14.12",
+    "fabricloader": ">=0.14.18",
     "fabric": "*",
-    "minecraft": "1.19.3"
+    "minecraft": "1.19.4"
   }
 }
