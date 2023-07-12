@@ -23,6 +23,7 @@ import net.minecraft.text.Text;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.function.Supplier;
 
 public class EnchantCommand extends net.minecraft.server.command.EnchantCommand {
 
@@ -79,9 +80,9 @@ public class EnchantCommand extends net.minecraft.server.command.EnchantCommand 
                     }
 
                     if (targets.size() == 1) {
-                        source.sendFeedback(Text.translatable("commands.enchant.success.single", new Object[]{enchantment2.getName(level), ((Entity) targets.iterator().next()).getDisplayName()}), true);
+                        source.sendFeedback(() -> Text.translatable("commands.enchant.success.single", new Object[]{enchantment2.getName(level), ((Entity) targets.iterator().next()).getDisplayName()}), true);
                     } else {
-                        source.sendFeedback(Text.translatable("commands.enchant.success.multiple", new Object[]{enchantment2.getName(level), targets.size()}), true);
+                        source.sendFeedback(() -> Text.translatable("commands.enchant.success.multiple", new Object[]{enchantment2.getName(level), targets.size()}), true);
                     }
 
                     return i;
